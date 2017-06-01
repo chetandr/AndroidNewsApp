@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#64b5f6</color>
+    <color name="colorFade">#aea9aa</color>
+    <color name="channelOne">#1DE9B6</color>
+    <color name="channelTwo">#F06292</color>
+    <color name="channelThree">#9575CD</color>
+    <color name="channelFour">#AED581</color>
 </resources>
