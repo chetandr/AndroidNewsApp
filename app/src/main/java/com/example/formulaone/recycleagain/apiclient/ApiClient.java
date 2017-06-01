@@ -1,4 +1,4 @@
-package com.example.formulaone.recycleagain;
+package com.example.formulaone.recycleagain.apiclient;
 
 import android.content.Context;
 
@@ -29,7 +29,7 @@ public class ApiClient {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
-                 //   .client(httpClient.build())
+                    .client(httpClient.build())
                     .build();
         }
 

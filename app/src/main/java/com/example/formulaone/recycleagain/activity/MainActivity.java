@@ -1,6 +1,5 @@
-package com.example.formulaone.recycleagain;
+package com.example.formulaone.recycleagain.activity;
 
-import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +12,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.formulaone.recycleagain.apiclient.ApiClient;
+import com.example.formulaone.recycleagain.apiclient.ApiInterface;
+import com.example.formulaone.recycleagain.adapters.ChannelAdapter;
+import com.example.formulaone.recycleagain.R;
+import com.example.formulaone.recycleagain.model.Source;
+import com.example.formulaone.recycleagain.model.Sources;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +29,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    private final static String API_KEY = "0ea0143e1a7c42b5a2c47cce7a956424";
+    public final static String API_KEY = "0ea0143e1a7c42b5a2c47cce7a956424";
 
     RecyclerView rv;
 
@@ -34,14 +40,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         rv = (RecyclerView)findViewById(R.id.rv);
 
@@ -50,23 +48,20 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
 
         rv.setLayoutManager(llm);
-        People p = new People();
-        List<Person> people = new ArrayList<>();
-
-        people.add(new Person("Anna Hathaway Wilson", "23 years old", R.drawable.anna));
-        people.add(new Person("Mila Kunis", "25 years old", R.drawable.mila));
-        people.add(new Person("Angelina Jolie", "35 years old", R.drawable.angelina));
-
-//        RVAdapter adapter = new RVAdapter(people);
-
 
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<Sources> call = apiService.getSources(API_KEY);
         call.enqueue(new Callback<Sources>() {
             @Override
             public void onResponse(Call<Sources> call, Response<Sources> response) {
-                List<Source> sources = response.body().getSources();
-                ChannelAdapter adapter = new ChannelAdapter(sources);
+                Sources sources = response.body();
+                List<Source> sourceList = new ArrayList<Source>();
+                Log.d(TAG, "Source " + sources);
+                if(sources != null) {
+                     sourceList = sources.getSources();
+                }
+
+                ChannelAdapter adapter = new ChannelAdapter(sourceList);
                 rv.setAdapter(adapter);
             }
 

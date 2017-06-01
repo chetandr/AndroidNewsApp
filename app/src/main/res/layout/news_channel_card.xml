@@ -4,12 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/cardview_shadow_start_color"
+    android:backgroundTintMode="src_in"
+    android:divider="@color/colorPrimary"
+    android:dividerPadding="@dimen/padding_extra">
 
     <android.support.v7.widget.CardView
         android:id="@+id/channelCardView"
+        style="@style/Base.DialogWindowTitleBackground.AppCompat"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="2dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -21,30 +28,40 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:text="@string/abc_news"
+                android:textColor="?attr/actionMenuTextColor"
                 android:textSize="@dimen/title_font_size"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded" />
 
             <TextView
                 android:id="@+id/channelCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:layout_marginTop="0dp"
+                android:inputType="textCapCharacters"
+                android:maxLines="1"
+                android:text="@string/general"
+                android:textColor="?android:attr/editTextColor"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/channelTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/channelTitle"
+                tools:ignore="MissingConstraints,RtlHardcoded,TextViewEdits" />
 
             <TextView
                 android:id="@+id/channelURL"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/http_abcmews_au"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/channelTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/channelDesc"
+                tools:ignore="RtlHardcoded" />
 
             <TextView
                 android:id="@+id/channelDesc"
@@ -52,8 +69,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="0dp"
-                android:text="TextView"
+                android:layout_marginTop="8dp"
+                android:padding="@dimen/padding_normal"
+                android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s_when_an_unknown_printer_took_a_galley_of_type_and_scrambled_it_to_make_a_type_specimen_book_it_has_survived_not_only_five_centuries_but_also_the_leap_into_electronic_typesetting_remaining_essentially_unchanged_it_was_popularised_in_the_1960s_with_the_release_of_letraset_sheets_containing_lorem_ipsum_passages_and_more_recently_with_desktop_publishing_software_like_aldus_pagemaker_including_versions_of_lorem_ipsum"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                app:layout_constraintHorizontal_bias="0.437"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/channelCategory" />

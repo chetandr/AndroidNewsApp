@@ -1,4 +1,4 @@
-package com.example.formulaone.recycleagain;
+package com.example.formulaone.recycleagain.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
