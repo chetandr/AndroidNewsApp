@@ -1,4 +1,4 @@
-package com.example.formulaone.recycleagain.adapters;
+package com.newsmesh.formulaone.recycleagain.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.CardView;
@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.formulaone.recycleagain.R;
-import com.example.formulaone.recycleagain.model.Article;
+import com.newsmesh.formulaone.recycleagain.R;
+import com.newsmesh.formulaone.recycleagain.model.Article;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

@@ -1,9 +1,9 @@
-package com.example.formulaone.recycleagain.apiclient;
+package com.newsmesh.formulaone.recycleagain.apiclient;
 
 
-import com.example.formulaone.recycleagain.model.Article;
-import com.example.formulaone.recycleagain.model.Articles;
-import com.example.formulaone.recycleagain.model.Sources;
+import com.newsmesh.formulaone.recycleagain.model.Article;
+import com.newsmesh.formulaone.recycleagain.model.Articles;
+import com.newsmesh.formulaone.recycleagain.model.Sources;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

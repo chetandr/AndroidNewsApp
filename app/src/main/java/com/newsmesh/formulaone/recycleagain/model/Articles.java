@@ -1,4 +1,4 @@
-package com.example.formulaone.recycleagain.model;
+package com.newsmesh.formulaone.recycleagain.model;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

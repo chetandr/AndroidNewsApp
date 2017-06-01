@@ -1,4 +1,4 @@
-package com.example.formulaone.recycleagain;
+package com.newsmesh.formulaone.recycleagain;
 
 import org.junit.Test;
 

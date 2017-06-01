@@ -1,4 +1,4 @@
-package com.example.formulaone.recycleagain.adapters;
+package com.newsmesh.formulaone.recycleagain.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.formulaone.recycleagain.R;
-import com.example.formulaone.recycleagain.activity.ArticleActivity;
-import com.example.formulaone.recycleagain.model.Source;
+import com.newsmesh.formulaone.recycleagain.R;
+import com.newsmesh.formulaone.recycleagain.activity.ArticleActivity;
+import com.newsmesh.formulaone.recycleagain.model.Source;
 
 import java.util.List;
 
@@ -71,7 +71,7 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ChannelV
     public class ChannelViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         CardView channelCardView;
         TextView channelTitle, channelCategory, channelURL, channelDesc;
-        public static final String SOURCE_CHANNEL = "com.example.myfirstapp.CHANNEL";
+        public static final String SOURCE_CHANNEL = "com.newsmesh.myfirstapp.CHANNEL";
         String mChannel;
         private final Context context;
 

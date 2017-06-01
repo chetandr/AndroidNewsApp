@@ -1,4 +1,4 @@
-package com.example.formulaone.recycleagain;
+package com.newsmesh.formulaone.recycleagain;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.formulaone.recycleagain", appContext.getPackageName());
+        assertEquals("com.newsmesh.formulaone.recycleagain", appContext.getPackageName());
     }
 }

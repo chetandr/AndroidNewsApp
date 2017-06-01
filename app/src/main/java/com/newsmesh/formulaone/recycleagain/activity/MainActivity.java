@@ -1,4 +1,4 @@
-package com.example.formulaone.recycleagain.activity;
+package com.newsmesh.formulaone.recycleagain.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,12 +12,12 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.formulaone.recycleagain.apiclient.ApiClient;
-import com.example.formulaone.recycleagain.apiclient.ApiInterface;
-import com.example.formulaone.recycleagain.adapters.ChannelAdapter;
-import com.example.formulaone.recycleagain.R;
-import com.example.formulaone.recycleagain.model.Source;
-import com.example.formulaone.recycleagain.model.Sources;
+import com.newsmesh.formulaone.recycleagain.apiclient.ApiClient;
+import com.newsmesh.formulaone.recycleagain.apiclient.ApiInterface;
+import com.newsmesh.formulaone.recycleagain.adapters.ChannelAdapter;
+import com.newsmesh.formulaone.recycleagain.R;
+import com.newsmesh.formulaone.recycleagain.model.Source;
+import com.newsmesh.formulaone.recycleagain.model.Sources;
 
 import java.util.ArrayList;
 import java.util.List;
